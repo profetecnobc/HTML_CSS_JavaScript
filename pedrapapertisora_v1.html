@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Pedra, paper o tisora</title>
+        <script>
+            function aleatori(min, max) {
+                return Math.floor(Math.random() * (max - min + 1) + min)
+            }
+            // 1 és pedra, 2 és paper i 3 és tisora
+            let jugador=0
+            let pc = aleatori(1,3)
+            jugador = prompt ("Tria: 1 per pedra, 2 per paper o 3 per tisora")
+            //alert("Has escollit " + jugador)
+            if (jugador==1) {
+                alert("Has escollit pedra")
+            } else if (jugador==2) {
+                alert ("Has escollit paper")
+            } else if (jugador==3) {
+                alert ("Has escollit tisora")
+            } else {
+                alert ("Has escollit PERDRE")
+            }
+            if (pc==1) {
+                alert("PC tria pedra")
+            } else if (pc==2) {
+                alert ("PC tria paper")
+            } else if (pc==3) {
+                alert ("PC tria tisora")
+            } 
+            //COMBAT
+            if (pc==jugador) {
+                alert ("EMPAT")
+            } else if (jugador ==1 && pc == 3) {
+                alert("GUANYES")
+            } else if (jugador ==2 && pc == 1) {
+                alert("GUANYES")
+            } else if (jugador ==3 && pc == 2) {
+                alert("GUANYES")
+            } else {
+                alert ("PERDS")
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Pedra, paper o</h1>
+    </body>
+</html>
